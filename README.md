@@ -1,12 +1,12 @@
-# ekr_docs
+# Inteeligent document processing with ML
 
-ML based contract infomartion extraction with storage and search functions.
+ML based contract infomartion extraction system with storage and search functions.
 
-Currently [pretrained](https://github.com/Duegreg/ekr_docs/blob/main/model/model.ipynb) for Hungarian [EKR documents](https://ekr.gov.hu/ekr-szerzodestar/hu/szerzodesLista), but you can replace it with your own custom model.
+Currently [pretrained](https://github.com/Duegreg/ekr_docs/blob/main/model/model.ipynb) for Hungarian [EKR documents](https://ekr.gov.hu/ekr-szerzodestar/hu/szerzodesLista) (national contracts), but you can replace it with your own custom model. Automatic retrain is in TODO.
 
 ## Services:
 ___
-### backend
+### Backend
 - `upload pdfs`
 -  -> store pdf file in AWS S3
 -  -> exract text with Tesseract OCR 
@@ -19,9 +19,10 @@ ___
 
 Technologies: JavaScript, Express.js + Pdf-Poppler, Tesseract-OCR, Elastic Search, AWS S3
 ___
-### model
+### Model
 - `predict`
-- -> batch text information extraction with CRFSuite ML model
+- -> batch text information extraction with CRFSuite ML model (Conditional Random Fields)
+- -> many other (DL) models have been tried, but those reached lower accuracy for this amount of data
 - `train`
 - -> todo
 

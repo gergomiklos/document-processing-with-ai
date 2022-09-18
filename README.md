@@ -20,13 +20,13 @@ ___
 Technologies: JavaScript, Express.js + Pdf-Poppler, Tesseract-OCR, Elastic Search, AWS S3
 ___
 ### Model
+The backend can run any .py and .ipynb model files as models with the excepted input/output formats
+
 - `predict`
 - -> batch text information extraction with CRFSuite ML [model](https://github.com/GergoMiklos/document-processing-with-ai/blob/main/model/model.ipynb) (Conditional Random Fields)
 - -> many other (DL) models have been tried, but those reached lower accuracy for this amount of data
 - `train`
 - -> todo
-
-Can run .py and .ipynb model files
 
 - tried models ([dataset](https://www.kaggle.com/miklosgergely/ekr-docs)):
   - Embedding + bi-LSTM

@@ -1,4 +1,4 @@
-# Inteeligent document processing with ML
+# Intelligent document processing with ML
 
 ML based contract infomartion extraction system with storage and search functions.
 

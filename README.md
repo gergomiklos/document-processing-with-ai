@@ -2,7 +2,7 @@
 
 ML based contract infomartion extraction system with storage and search functions.
 
-Currently [pretrained](https://github.com/Duegreg/ekr_docs/blob/main/model/model.ipynb) for Hungarian [EKR documents](https://ekr.gov.hu/ekr-szerzodestar/hu/szerzodesLista) (national contracts), but you can replace it with your own custom model. Automatic retrain is in TODO.
+Currently [pretrained](https://github.com/GergoMiklos/document-processing-with-ai/blob/main/model/model.ipynb) for Hungarian [EKR documents](https://ekr.gov.hu/ekr-szerzodestar/hu/szerzodesLista) (national contracts), but you can replace it with your own custom model. Automatic retrain is in TODO.
 
 ## Services:
 ___
@@ -21,7 +21,7 @@ Technologies: JavaScript, Express.js + Pdf-Poppler, Tesseract-OCR, Elastic Searc
 ___
 ### Model
 - `predict`
-- -> batch text information extraction with CRFSuite ML model (Conditional Random Fields)
+- -> batch text information extraction with CRFSuite ML [model](https://github.com/GergoMiklos/document-processing-with-ai/blob/main/model/model.ipynb) (Conditional Random Fields)
 - -> many other (DL) models have been tried, but those reached lower accuracy for this amount of data
 - `train`
 - -> todo

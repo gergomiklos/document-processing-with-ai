@@ -1,6 +1,6 @@
 # Intelligent document processing with ML
 
-ML based contract infomartion extraction system with storage and search functions.
+ML based PDF contract infomartion extraction system with storage and search functions.
 
 Currently [pretrained](https://github.com/GergoMiklos/document-processing-with-ai/blob/main/model/model.ipynb) for Hungarian [EKR documents](https://ekr.gov.hu/ekr-szerzodestar/hu/szerzodesLista) (national contracts), but you can replace it with your own custom model. Automatic retrain is in TODO.
 

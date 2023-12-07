@@ -1,45 +1,45 @@
-# Intelligent document processing with ML
+# Intelligent document processing with AI
 
-ML based PDF contract infomartion extraction system with storage and search functions.
+ML-based PDF infomartion extraction system with storage and search functions.
 
-Currently [pretrained](https://github.com/GergoMiklos/document-processing-with-ai/blob/main/model/model.ipynb) for Hungarian [EKR documents](https://ekr.gov.hu/ekr-szerzodestar/hu/szerzodesLista) (national contracts), but you can replace it with your own custom model. Automatic retrain is in TODO.
+Currently [pretrained](https://github.com/GergoMiklos/document-processing-with-ai/blob/main/model/model.ipynb) for Hungarian [EKR documents](https://ekr.gov.hu/ekr-szerzodestar/hu/szerzodesLista) (some official national contracts), but you can train 6 different models with your own data.
 
 ## Services:
-___
 ### Backend
 - `upload pdfs`
--  -> store pdf file in AWS S3
--  -> exract text with Tesseract OCR 
--  -> exract information with [model service](#model)
--  -> store text data in Elastic Search
+  -  store pdf file in AWS S3
+  -  exract text with Tesseract OCR 
+  -  exract information using the __model__ service
+  -  store text data in Elastic Search
 - `search`
-- -> return pdf text data by query (match/levenhstein/regex/...)
+  - return pdf text data by query (match/levenhstein/regex/...)
 - `download`
-- -> download pdf file by filename
+  - download pdf file by filename
 
-Technologies: JavaScript, Express.js + Pdf-Poppler, Tesseract-OCR, Elastic Search, AWS S3
-___
+Tech: JavaScript, Express.js, Pdf-Poppler, Tesseract-OCR, Elastic Search, AWS S3
+
 ### Model
-The backend can run any .py and .ipynb model files as models with the excepted input/output formats
+The backend can run any .py and .ipynb files as  with the excepted input/output formats
 
 - `predict`
-- -> batch text information extraction with CRFSuite ML [model](https://github.com/GergoMiklos/document-processing-with-ai/blob/main/model/model.ipynb) (Conditional Random Fields)
-- -> many other (DL) models have been tried, but those reached lower accuracy for this amount of data
+  - batch text information extraction with CRFSuite ML [model](https://github.com/GergoMiklos/document-processing-with-ai/blob/main/model/model.ipynb) (Conditional Random Fields)
+  - many other models have been tried, but those reached lower accuracy for this amount of data
 - `train`
-- -> todo
+  - todo
 
-- tried models ([dataset](https://www.kaggle.com/miklosgergely/ekr-docs)):
-  - Embedding + bi-LSTM
-  - Embedding + bi-LSTM + LSTM
-  - Embedding + bi-LSTM + LSTM + CRF
+- tested models ([dataset](https://www.kaggle.com/miklosgergely/ekr-docs)):
+  - Custom neural networks:
+    - Embedding + bi-LSTM
+    - Embedding + bi-LSTM + LSTM
+    - Embedding + bi-LSTM + LSTM + CRF
   - Bert
   - XGBoost
   - CRFSuite
 
-Technologies: Python, Flask + Keras, PyTorch, Bert, XGboost, PyCRFSuite
-___
-### frontend
-- in progress
+Tech: Python, Flask, Keras, PyTorch, Bert, XGboost, PyCRFSuite
 
-Technologies: JavaScript, React
-___
+### Frontend
+- draft
+
+Tech: JavaScript, React
+
